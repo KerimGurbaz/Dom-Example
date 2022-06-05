@@ -28,6 +28,12 @@ add.onclick = function () {
 
 };
 
+
+
+del.onclick = function () {
+    ul.childElementCount > 0 ? ul.removeChild(ul.lastElementChild) : alert("All data has been deleted..")
+}
+
 const javascriptKontrol = () => {
     document.querySelectorAll("ul li").forEach((languages) => {
 
@@ -36,4 +42,12 @@ const javascriptKontrol = () => {
             languages.className = "red"
         }
     })
-}
+};
+
+languages.addEventListener("keydown", (e) => {
+    // console.log(e);
+    if (e.code === "Enter") {
+        add.onclick();
+    }
+
+})
