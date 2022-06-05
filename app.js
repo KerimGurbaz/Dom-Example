@@ -51,3 +51,6 @@ languages.addEventListener("keydown", (e) => {
     }
 
 })
+
+
+languages.focus();
